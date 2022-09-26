@@ -1,13 +1,16 @@
-package fr.pantheonsorbonne.ufr27.miage.m1.app.dao;
+package fr.pantheonsorbonne.ufr27.miage.m1.app.dao.impl;
 
+import fr.pantheonsorbonne.ufr27.miage.m1.app.dao.AccountDAO;
 import fr.pantheonsorbonne.ufr27.miage.m1.app.model.AccountDTO;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
+@Named("array")
 public class AccountDAOImpl implements AccountDAO {
 
     private AccountDTO[] accounts;
@@ -16,9 +19,18 @@ public class AccountDAOImpl implements AccountDAO {
 
     {
         accounts = new AccountDTO[INITIAL_SIZE];
-        accounts[size++] = new AccountDTO(0, "toto", "titi", 0);
-        accounts[size++] = new AccountDTO(0, "tutu", "titi", 1);
-        accounts[size++] = new AccountDTO(0, "tata", "titi", 2);
+
+
+    }
+
+    public AccountDAOImpl(){
+
+
+            this.createAccount("toto", "tutu", 1);
+            this.createAccount("totoMap", "tutuMAP", 1);
+            this.createAccount("Maptoto", "Maptutu", 1);
+
+
 
     }
 

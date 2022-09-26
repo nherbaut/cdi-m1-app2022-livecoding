@@ -1,4 +1,4 @@
-package fr.pantheonsorbonne.ufr27.miage.m1.app;
+package fr.pantheonsorbonne.ufr27.miage.m1.app.resources;
 
 import fr.pantheonsorbonne.ufr27.miage.m1.app.model.AccountDTO;
 import fr.pantheonsorbonne.ufr27.miage.m1.app.service.AccountService;
@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.stream.Collectors;
 
 @Path("/")
-public class GreetingResource {
+public class AccountResource {
 
 
     @Inject
